@@ -1,0 +1,52 @@
+{
+  "project_name": "Modular Amphitheater Cruise Duck Riser",
+  "target_output": "OpenSCAD",
+  "status": "Ready for OpenSCAD Generation",
+  "design_rationale": "A 3-tier laterally modular wedge riser forming a semicircle. Features a solid back wall, chamfered edges, and lateral dovetail joints. Internally sloped to allow support-free printing in a right-side-up orientation.",
+  "duck_specifications": {
+    "duck_type": "Custom 3D Printed",
+    "base_width_mm": 30.0,
+    "base_depth_mm": 59.0,
+    "duck_height_mm": 54.0
+  },
+  "amphitheater_geometry": {
+    "modules_for_180_degrees": 5,
+    "wedge_angle_degrees": 36.0,
+    "inner_radius_mm": 105.0
+  },
+  "capacity_and_layout": {
+    "number_of_rows_tiers": 3,
+    "ducks_per_row_per_module": "Row 1: ~2 ducks, Row 2: ~3 ducks, Row 3: ~4 ducks",
+    "duck_spacing_allowance_mm": 2.5
+  },
+  "step_geometry": {
+    "tread_depth_mm": 62.0,
+    "step_rise_height_mm": 28.0,
+    "retaining_lip_required": false,
+    "retaining_lip_height_mm": 0.0,
+    "edge_treatment": "Chamfered (approx 1.5mm distance)",
+    "calculated_total_depth_mm": 186.0,
+    "calculated_total_height_mm": 84.0
+  },
+  "structural_design": {
+    "style": "Shelled / Hollow underneath with self-supporting 45-degree internal slopes.",
+    "wall_thickness_mm": 2.4,
+    "interlocking_joints": {
+      "required": true,
+      "type": "Lateral Dovetail (angled along the wedge radius)",
+      "dovetails_per_side": 3,
+      "slide_direction": "Top-Down",
+      "male_connector_side": "right",
+      "female_connector_side": "left",
+      "tolerance_clearance_mm": 0.25
+    },
+    "recommended_print_orientation": "Printed right-side up. Internal geometry adjusted to 45-degree angles to eliminate supports."
+  },
+  "printer_constraints": {
+    "max_build_x_mm": 220,
+    "max_build_y_mm": 220,
+    "max_build_z_mm": 250,
+    "fits_on_bed": true,
+    "calculated_bounding_box_mm": "Approx 186 x 175 mm"
+  }
+}
